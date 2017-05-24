@@ -6,9 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
-User.create(email: 'demo@codiceplastico.com', password: 'demopwd', admin: true, name: 'demopwd')
-Setting.create(key: 'fiscal_year', value: 2013)
+User.create(email: 'demo@gmail.com', password: 'demopwd', admin: true, name: 'demopwd')
+Setting.create(key: 'fiscal_year', value: 2017)
 
 Setting.create(key: 'iva', value: 0.22)
 Setting.create(key: 'iban', value: 'define_your_iban')
@@ -25,11 +24,11 @@ Setting.create(key: 's3_bucket', value: 's3_bucket')
 Setting.create(key: 's3_access_key_id', value: 's3_access_key_id')
 Setting.create(key: 's3_secret_access_key', value: 's3_secret_access_key')
 
-UserActivityType.create(description: 'lavorativa', isWorking: true)
-UserActivityType.create(description: 'ferie', isWorking: false)
-UserActivityType.create(description: 'malattia', isWorking: false)
+UserActivityType.create(description: 'working', isWorking: true)
+UserActivityType.create(description: 'vacation', isWorking: false)
+UserActivityType.create(description: 'sick', isWorking: false)
 
-ExpenseType.create(description: 'rimborso km')
-ExpenseType.create(description: 'alloggio')
-ExpenseType.create(description: 'treno')
-ExpenseType.create(description: 'vitto')
+ExpenseType.create(description: 'distance mi')
+ExpenseType.create(description: 'hotel')
+ExpenseType.create(description: 'transportaion')
+ExpenseType.create(description: 'lodging')
