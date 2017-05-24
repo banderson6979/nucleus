@@ -1,0 +1,4 @@
+admin:
+    id: 1
+    email: 'dreamstarter@gmail.com'
+    admin: true
