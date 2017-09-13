@@ -37,7 +37,7 @@ en:
     activity: activity
     activities: activities
 
-  views: 
+  views:
     top_bar:
       dashboard: dashboard
       invoices: invoices
@@ -104,9 +104,9 @@ en:
       amount: amount
       new_item: new item
     tracker:
-      tracking_of: tracking activities of 
-      notes: notes 
-      activity_started_at: activity started at 
+      tracking_of: tracking activities of
+      notes: notes
+      activity_started_at: activity started at
       activity_completed_at: activity completed at
       time: time
       resume: resume
@@ -176,8 +176,8 @@ en:
       edit: Edit
       delete: Delete
       new_activity: New activity
-      report: Report attività
-      report_2: Report presenze
+      report: Report activity
+      report_2: Report attendance
       summary: Summary
       today: Today
       yesterday: Yesterday
@@ -406,4 +406,3 @@ en:
         has_tax: has tax
       inbound_invoice:
         number: Number
-          

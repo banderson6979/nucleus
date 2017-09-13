@@ -49,7 +49,7 @@ it:
         total: Totale
         expenses: Spese
       per_customer:
-        invoiced: Fatturato per cliente
+        invoiced: Fatturato per Client
       job_orders:
         apply: Applica
         job_orders_status: Stato commesse
@@ -64,7 +64,7 @@ it:
       summary: Riepilogo
       number: Numero
       date: Data
-      customer: Cliente
+      customer: Client
       taxable_income: Imponibile
       is_payed: Pagato
       status: Stato
@@ -103,7 +103,7 @@ it:
       apply: Applica
       number: Numero
       date: Data
-      customer: Cliente
+      customer: Client
       taxable_income: Imponibile
       vat: IVA
       total: Totale
@@ -113,7 +113,7 @@ it:
     job_orders:
       title: Commesse
       code: Codice
-      customer: Cliente
+      customer: Client
       hourly_rate: Tariffa oraria
       status: Stato (ore fatte/totale)
       earn: Guadagno (Stima-spesa)
@@ -408,7 +408,7 @@ it:
         number: Numero
         due_date: Data scadenza
         date: Data fattura
-        customer: Cliente
+        customer: Client
         is_payed: Pagata
         notes: Note
       inbound_invoice:

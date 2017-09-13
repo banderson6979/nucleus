@@ -14,7 +14,7 @@ What can you do with Nucleus?
 - Managing users
 - Managing customers
 - Real-time activity tracker
-- English support
+- English and Italian language support
 - Added activity expenses with attachment (stored on Amazon S3)
 - Weekly activities. Easily insert you activities of the week on one screen.
 
@@ -30,7 +30,7 @@ It's built on **Rails 4.0**.
 There are some settings that you have to set in the setting page.
 These are:
 
-- *iva*: vat coeff
+- *iva*: vat coeff (VAT Coefficient & Rounding Precision)
 - *iban* bank account number
 - *dropbox_enabled*: enable/disable dropbox support
 - *dropbox_app_key*: dropbox credentials
@@ -44,6 +44,6 @@ These are:
 - *s3_access_key_id*: s3 credential
 - *s3_secret_access_key*: s3 credential
 
-To obtain the keys for DROPBOX you can read this http://ema.codiceplastico.com//rails/2013/03/22/usare-dropbox-da-unapplicazione-rails.html
+To obtain the keys for DROPBOX you can read this https://docs.pingidentity.com/bundle/dropboxConn20_sm_quickConnect/page/dropboxConn_t_obtainAppKeySecretFromDropbox.html
 
 If you want access to S3 you need to configure the bucket on the S3 console and specify the keys on the settings page(s3_access_key_id, s3_secret_access_key).

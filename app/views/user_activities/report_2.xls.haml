@@ -13,15 +13,14 @@
 	%tr
 		%td
 		%td{:style=> 'border:#999 1px solid '}
-			ore lavorate
+			Hours you worked
 		- @formatted_activities.each do |a|
 			%td{:style=> 'border:#999 1px solid '}
 				= a.working_hours
 	%tr
 		%td
 		%td{:style=> 'border:#999 1px solid '}
-			ore permesso/ferie
+			Hours on vacation
 		- @formatted_activities.each do |a|
 			%td{:style=> 'border:#999 1px solid '}
 				= a.holiday_hours
-		

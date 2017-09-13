@@ -18,14 +18,14 @@
           %label
             = t('views.activities.user')
           = select_tag 'user', options_from_collection_for_select(@users, "id", "email"), 'ng-model' => 'user', 'ng-init' => "user='#{@current_user.id}'", :class => 'form-control'
-        %button.btn.btn-info.pull-right{:type => 'button', 'ng-click' => 'filter()'} 
+        %button.btn.btn-info.pull-right{:type => 'button', 'ng-click' => 'filter()'}
           = t('views.activities.apply')
 
       %table.table.table-bordered
         %thead
           %tr
             %th
-            %th 
+            %th
               = t('views.activities.date')
             %th
               = t('views.activities.hours')
@@ -35,7 +35,7 @@
               = t('views.activities.activity')
             %th
               = t('views.activities.notes')
-                         
+
             %th
         %tbody
 
@@ -47,7 +47,7 @@
                 {{a.date | date:'dd-MM-yyyy'}}
               %br
               %small.grey{'ng-bind' => 'getDay(a.date)'}
-               
+
             %td {{a.hours}}
             %td {{a.jobOrder}}
             %td {{a.activity}}
@@ -55,7 +55,7 @@
             %td
               .btn-group
                 %button.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown"}
-                  = t('views.activities.actions') 
+                  = t('views.activities.actions')
                   %span.caret
                 %ul.dropdown-menu{:role => "menu"}
                   %li
@@ -75,8 +75,8 @@
                     %a{:href => "/expenses?user_activity_id={{a.id}}"}
                       %i.icon-euro.icon-large
                       = t('views.activities.expense_list')
-           
-              
+
+
   .col-lg-3.sidebar-nav{'ng-controller' => 'RightPanelCtrl'}
     .row.sidebar-row
       %a.btn.btn-info.btn-block#openModal{:href => '#editActivity', 'ng-click' => 'newActivity()', "data-toggle"=>"modal"}
@@ -86,31 +86,31 @@
       %a.btn.btn-default.btn-block#report{"href" => '/user_activities/report.xls?month={{month}}&year={{year}}&user={{user}}'}
         = t('views.activities.report')
       %a.btn.btn-default.btn-block#report2{"href" => '/user_activities/report_2.xls?month={{month}}&year={{year}}&user={{user}}'}
-        = t('views.activities.report_2')  
+        = t('views.activities.report_2')
       -# %a.btn.btn-default.btn-block#report_tutti{"href" => '/user_activities/report_presenze.xls?month={{month}}&year={{year}}&user={{user}}'}
-      -#   Report presenze tutti  
+      -#   Report presenze tutti
       %iframe#frm{:style => "display:none"}
     .row.sidebar-row
       .panel.panel-default
         .panel-heading
-          %h3.panel-title.text-center 
+          %h3.panel-title.text-center
             = t('views.activities.summary')
         .panel-body
           %ul#stats.info-panel
-            %li.header 
+            %li.header
               = t('views.activities.today')
             %li.amount {{todayHours}} h
-            %li.header 
+            %li.header
               = t('views.activities.yesterday')
             %li.amount {{yestardayHours}} h
-            
-    
+
+
 #editActivity.modal.fade{'ng-controller' => 'UserActivityCtrl'}
   .modal-dialog
     .modal-content
       .modal-header
         %button.close{:type => 'button', 'data-dismiss' => 'modal'} &times;
-        %h3 
+        %h3
           = t('views.activities.new_activity')
       .modal-body
         %form{"data-bind" => "submit: save", :role => 'form'}
@@ -118,16 +118,16 @@
           .row
             .col-lg-6
               .form-group
-                %label 
-                  Tipo attività
+                %label
+                  Activity type
                 = select_tag :job_order, '', 'ng-model' => 'activity.user_activity_type_id', 'ng-options' => 'a.id as a.description for a in activityTypes', :class => 'form-control'
             .col-lg-6
               .form-group
-                
+
           .row
             .col-lg-6
               .form-group
-                %label 
+                %label
                   = t('views.activities.job_order')
                 = select_tag :job_order, '', 'ng-model' => 'activity.job_order_id', 'ng-options' => 'j.id as j.code for j in jobOrders', :class => 'form-control', 'ng-disabled' => '!jobOrderEnabled()'
             .col-lg-6
@@ -138,24 +138,23 @@
           .row
             .col-lg-6
               .form-group
-                %label 
+                %label
                   = t('views.activities.hours')
                 = text_field_tag 'hours', '', :class => 'input-small', 'ng-model' => "activity.hours", :class => 'form-control'
             .col-lg-6
               .form-group
-                %label 
+                %label
                   = t('views.activities.date')
                 = text_field_tag 'date', '', :class => 'input-small', 'ng-model' => "activity.date", "b-datepicker" => "", :class => 'form-control'
           .row
             .col-lg-12
               .form-group
-                %label 
+                %label
                   = t('views.activities.notes')
                 = text_area_tag :description, '', 'ng-model' => "activity.description", :class => 'form-control'
-              
+
       .modal-footer
-        %a.btn.btn-default{'data-dismiss' => 'modal'} 
+        %a.btn.btn-default{'data-dismiss' => 'modal'}
           = t('views.activities.cancel')
-        %button.btn.btn-info{:type => 'submit', 'data-dismiss' => 'modal', 'ng-click' => 'save()'} 
-          = t('views.activities.save')    
-    
+        %button.btn.btn-info{:type => 'submit', 'data-dismiss' => 'modal', 'ng-click' => 'save()'}
+          = t('views.activities.save')
