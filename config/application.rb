@@ -5,6 +5,8 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
+# Custom Bootstrap theme for Rail Admin (gem)
+ENV['RAILS_ADMIN_THEME'] = 'flatly_theme'
 
 module Nucleus
   class Application < Rails::Application

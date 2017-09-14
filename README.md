@@ -1,6 +1,6 @@
 ## Welcome Nucleus
 
-This is a simple invoice and tracking application suited for small companies. It helps you in managing your daily task in your daily business: track activities, expenses and invoices.
+This is a simple invoice and tracking application. It helps you in managing your daily task in your daily business: track activities, expenses and invoices.
 
 What can you do with Nucleus?
 
@@ -18,7 +18,7 @@ What can you do with Nucleus?
 - Added activity expenses with attachment (stored on Amazon S3)
 - Weekly activities. Easily insert you activities of the week on one screen.
 
-It's built on **Rails 4.0**.
+It's built on **Rails 4.1**.
 
 ### Installation
 1. Clone the repository
@@ -47,3 +47,12 @@ These are:
 To obtain the keys for DROPBOX you can read this https://docs.pingidentity.com/bundle/dropboxConn20_sm_quickConnect/page/dropboxConn_t_obtainAppKeySecretFromDropbox.html
 
 If you want access to S3 you need to configure the bucket on the S3 console and specify the keys on the settings page(s3_access_key_id, s3_secret_access_key).
+
+### Tests
+The application test are using RSpec.
+
+1. rake spec
+
+May need to run, if you have not setup the test database
+- rake db:migrate && rake db:test:prepare
+- Alternatively, rake spec --format documentation

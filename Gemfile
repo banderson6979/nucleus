@@ -18,7 +18,7 @@ gem 'protected_attributes'
 group :development, :test do
   gem 'meta_request'
   gem 'sqlite3'
-  gem "rspec-rails", "~> 2.0"
+  gem "rspec-rails", "~> 3.5.0"
   gem 'minitest-reporters',       '1.1.14'
   gem 'guard',                    '2.13.0'
   gem 'guard-minitest',           '2.4.4'
@@ -30,6 +30,7 @@ group :production do
 end
 
 gem 'jquery-rails'
+gem 'rails_admin_flatly_theme', github: 'konjoot/rails_admin_flatly_theme'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
