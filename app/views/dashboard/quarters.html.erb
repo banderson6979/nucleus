@@ -1,0 +1,72 @@
+<div class="panel panel-default">
+  <div class="panel-heading dashboard-panel">
+    <h3 class="panel-title">
+      <%= t('views.dashboard.quarters.invoiced') %>
+      <div class="pull-right">
+        <ul class="nav nav-tabs dashboard-tabs">
+          <li class="active">
+            <a data-toggle="tab" href="#q-num">
+              <i class="icon-table"></i>
+            </a>
+          </li>
+          <li>
+            <a data-toggle="tab" href="#q-chart">
+              <i class="icon-bar-chart"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </h3>
+  </div>
+  <div class="panel-body">
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade in active" id="q-num">
+        <table class="table">
+          <tr>
+            <td>
+              1
+            </td>
+            <td>
+              <span class="pull-right">
+                <%= number_to_currency @quarters.q1 %>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              2
+            </td>
+            <td>
+              <span class="pull-right">
+                <%= number_to_currency @quarters.q2 %>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              3
+            </td>
+            <td>
+              <span class="pull-right">
+                <%= number_to_currency @quarters.q3 %>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              4
+            </td>
+            <td>
+              <span class="pull-right">
+                <%= number_to_currency @quarters.q4 %>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="tab-pane fade" id="q-chart">
+        <img src="//charts.brace.io/bar.svg?_show_legend=false&_height=200px&_width=500px&amount=<%= @quarter_chart %>"/>
+      </div>
+    </div>
+  </div>
+</div>

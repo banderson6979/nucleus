@@ -1,0 +1,43 @@
+<div class="page-header">
+  <h2>
+    <%= t('views.settings.title') %>
+  </h2>
+</div>
+<form action="/settings/update" method="POST">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"></input>
+  <div class="row">
+    <div class="col-lg-9">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>
+              <%= t('views.settings.key') %>
+            </th>
+            <th>
+              <%= t('views.settings.value') %>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @settings.each do |setting| %>
+            <tr>
+              <td>
+                <%= setting.key %>
+              </td>
+              <td>
+                <%= text_field_tag setting.key, setting.value %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-lg-3">
+      <div class="row sidebar-row">
+        <button class="btn btn-info btn-block" type="submit">
+          <%= t('views.settings.save') %>
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

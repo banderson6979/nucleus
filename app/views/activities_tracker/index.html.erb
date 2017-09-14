@@ -1,0 +1,138 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1>
+      <%= t('views.tracker.tracking_of ') + current_user.name %>
+    </h1>
+  </div>
+</div>
+<div class="col-lg-12" ng-controller="TrackerCtrl">
+  <div class="row">
+    <form class="form-inline">
+      <div class="form-group col-lg-3">
+        <label>
+          <%= t('views.tracker.job_order') %>
+        </label>
+        <%= select_tag :job_order, '', 'ng-model' => 'job_order_id', 'ng-options' => 'j.id as j.code for j in jobOrders', :class => 'form-control' %>
+      </div>
+      <div class="form-group col-lg-3">
+        <label>
+          <%= t('views.tracker.activity') %>
+        </label>
+        <%= select_tag :activity, '', 'ng-model' => 'job_order_activity_id', 'ng-options' => 'j.id as j.description for j in jobOrderActivities', :class => 'form-control' %>
+      </div>
+      <div class="form-group col-lg-4">
+        <label>
+          <%= t('views.tracker.notes') %>
+        </label>
+        <textarea class="form-control" ng-model="notes"></textarea>
+      </div>
+      <div class="form-group col-lg-2">
+        <label>&nbsp;</label>
+        <a class="{{cssClass}} form-control btn btn-block" ng-click="start()">{{operation}}</a>
+      </div>
+    </form>
+  </div>
+  <div class="row timer">
+    <div class="col-lg-12 well">
+      <h2 class="text-center">{{timer}}</h2>
+      <h5 class="text-center" ng-show="isStarted()">
+        <%= t('views.tracker.activity_started_at') %>
+        {{startTime}}
+      </h5>
+      <h5 class="text-center" ng-show="isCompleted()">
+        <%= t('activity_started_at') %>
+        {{startTime}}
+        <%= t('activity_completed_at') %>
+        {{stopTime}}
+      </h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-9">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>
+              <%= t('views.tracker.job_order') %>
+            </th>
+            <th>
+              <%= t('views.tracker.activity') %>
+            </th>
+            <th>
+              <%= t('views.tracker.notes') %>
+            </th>
+            <th>
+              <%= t('views.tracker.time') %>
+            </th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="a in activities" row-color="{{$index}}">
+            <td>
+              {{a.jobOrder}}
+            </td>
+            <td>
+              {{a.activity}}
+            </td>
+            <td>
+              {{a.notes}}
+            </td>
+            <td>
+              {{a.time}}
+              <br/>
+              <p class="muted">{{a.start_time}}-{{a.stop_time}}</p>
+            </td>
+            <td>
+              <div class="btn-group">
+                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  Azioni
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li>
+                    <a href="#" ng-click="start(a)">
+                      <i class="icon-play"></i>
+                      <%= t('views.tracker.resume') %>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" ng-click="delete(a)">
+                      <i class="icon-trash text-error"></i>
+                      <%= t('views.tracker.remove') %>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-lg-3 sidebar-nav" ng-controller="TrackerSideBarCtrl">
+      <div class="row sidebar-row">
+        <button class="btn btn-info btn-block" ng-click="saveAll()">
+          <%= t('views.tracker.save_all') %>
+        </button>
+        <br/>
+        <button class="btn btn-default btn-block" ng-click="deleteAll()">
+          <%= t('views.tracker.remove_all') %>
+        </button>
+      </div>
+      <div class="row sidebar-row">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title text-center">
+              <%= t('views.tracker.summary') %>
+            </h3>
+          </div>
+          <div class="panel-body">
+            <ul class="info-panel" id="stats">
+              <li class="header">Todo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

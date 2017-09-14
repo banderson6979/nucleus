@@ -1,0 +1,24 @@
+<fieldset>
+  <legend>
+    <%= t('views.job_orders.title') %>
+  </legend>
+  <%= render 'form' %>
+</fieldset>
+<%= content_for :side_bar do %>
+  <div class="well sidebar-nav">
+    <ul class="totals info-panel">
+      <li>
+        <%= t('views.job_orders.total_hours') %>
+      </li>
+      <li class="amount" id="taxable-income"></li>
+    </ul>
+    <hr/>
+    <ul class="info-panel">
+      <li>
+        <a class="btn btn-primary" id="save-form">
+          <%= t('views.job_orders.save') %>
+        </a>
+      </li>
+    </ul>
+  </div>
+<% end %>

@@ -35951,3 +35951,2298 @@ Started GET "/assets/weeklyActivity.js?body=1" for 127.0.0.1 at 2017-09-14 10:46
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-09-14 10:46:47 -0400
+
+
+Started GET "/activities_tracker" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+Processing by ActivitiesTrackerController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered activities_tracker/index.html.haml within layouts/application (10.4ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/bootstrap-file-input.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/angular-app.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/inbound_invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/job_orders.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/tracker.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/user_activities.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/weeklyActivity.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+
+
+Started GET "/activities_tracker/today" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+Processing by ActivitiesTrackerController#today as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mActivityTracker Load (0.1ms)[0m  [1mSELECT "activity_trackers".* FROM "activity_trackers"  WHERE "activity_trackers"."date" = '2017-09-14' AND "activity_trackers"."status" = 1 AND "activity_trackers"."user_id" = 2[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/job_orders" for 127.0.0.1 at 2017-09-14 11:05:56 -0400
+Processing by JobOrdersController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mJobOrder Load (0.1ms)[0m  [1mSELECT id, code FROM "job_orders"  WHERE "job_orders"."archived" = 'f'  ORDER BY code[0m
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_activities" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+Processing by UserActivitiesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered user_activities/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/angular-app.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/bootstrap-file-input.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/inbound_invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/job_orders.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/tracker.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/user_activities.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/weeklyActivity.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+
+
+Started GET "/user_activities/stats/2017/8" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+Processing by UserActivitiesController#stats as JSON
+  Parameters: {"year"=>"2017", "month"=>"8"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("user_activities"."hours") AS sum_id FROM "user_activities"  WHERE (user_id = 2 and DATE(date) = '2017-09-14')[0m
+  [1m[35m (0.1ms)[0m  SELECT SUM("user_activities"."hours") AS sum_id FROM "user_activities"  WHERE (user_id = 2 and DATE(date) = '2017-09-13')
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user_activity_types" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+Processing by UserActivityTypesController#index as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUserActivityType Load (0.1ms)[0m  SELECT "user_activity_types".* FROM "user_activity_types"
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/job_orders" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+Processing by JobOrdersController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mJobOrder Load (0.2ms)[0m  SELECT id, code FROM "job_orders"  WHERE "job_orders"."archived" = 'f'  ORDER BY code
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user_activities/2/2017/9" for 127.0.0.1 at 2017-09-14 11:06:00 -0400
+Processing by UserActivitiesController#index as JSON
+  Parameters: {"user"=>"2", "year"=>"2017", "month"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUserActivity Load (0.2ms)[0m  SELECT "user_activities".* FROM "user_activities"  WHERE (date >= '2017-09-01' and date <= '2017-10-01' and user_id = '2')  ORDER BY date
+  [1m[36mExpense Load (0.1ms)[0m  [1mSELECT "expenses".* FROM "expenses"  WHERE "expenses"."user_activity_id" IN (2, 3, 4, 5)[0m
+  [1m[35mUserActivityType Load (0.1ms)[0m  SELECT  "user_activity_types".* FROM "user_activity_types"  WHERE "user_activity_types"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "expenses"  WHERE "expenses"."user_activity_id" = ?[0m  [["user_activity_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_activity_types".* FROM "user_activity_types"  WHERE "user_activity_types"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "expenses"  WHERE "expenses"."user_activity_id" = ?[0m  [["user_activity_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_activity_types".* FROM "user_activity_types"  WHERE "user_activity_types"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "expenses"  WHERE "expenses"."user_activity_id" = ?[0m  [["user_activity_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_activity_types".* FROM "user_activity_types"  WHERE "user_activity_types"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "expenses"  WHERE "expenses"."user_activity_id" = ?[0m  [["user_activity_id", 5]]
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/weekly_activities" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+Processing by WeeklyActivitiesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered weekly_activities/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/bootstrap-file-input.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/angular-app.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/inbound_invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/job_orders.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/tracker.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/user_activities.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/weeklyActivity.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+
+
+Started GET "/job_orders" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+Processing by JobOrdersController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mJobOrder Load (0.1ms)[0m  SELECT id, code FROM "job_orders"  WHERE "job_orders"."archived" = 'f'  ORDER BY code
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/weekly_activities/current_week?startday=" for 127.0.0.1 at 2017-09-14 11:06:03 -0400
+Processing by WeeklyActivitiesController#get_current_week as JSON
+  Parameters: {"startday"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUserActivity Load (0.2ms)[0m  SELECT job_order_id as joid, job_order_activity_id as id, date , sum(hours) as hours FROM "user_activities" inner join job_order_activities joa on job_order_activity_id = joa.id WHERE (date >= '2017-09-11 04:00:00.000000' and date <= '2017-09-18 04:00:00.000000' and user_id = 2) GROUP BY job_order_id, "user_activities"."job_order_activity_id", "user_activities"."date"  ORDER BY job_order_activity_id, date
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/weekly_activities" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+Processing by WeeklyActivitiesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered weekly_activities/index.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 33ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/angular-app.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/bootstrap-file-input.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/inbound_invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/job_orders.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/tracker.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/user_activities.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/weeklyActivity.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+
+
+Started GET "/job_orders" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+Processing by JobOrdersController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mJobOrder Load (0.1ms)[0m  [1mSELECT id, code FROM "job_orders"  WHERE "job_orders"."archived" = 'f'  ORDER BY code[0m
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/weekly_activities/current_week?startday=" for 127.0.0.1 at 2017-09-14 11:06:28 -0400
+Processing by WeeklyActivitiesController#get_current_week as JSON
+  Parameters: {"startday"=>""}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUserActivity Load (0.1ms)[0m  [1mSELECT job_order_id as joid, job_order_activity_id as id, date , sum(hours) as hours FROM "user_activities" inner join job_order_activities joa on job_order_activity_id = joa.id WHERE (date >= '2017-09-11 04:00:00.000000' and date <= '2017-09-18 04:00:00.000000' and user_id = 2) GROUP BY job_order_id, "user_activities"."job_order_activity_id", "user_activities"."date"  ORDER BY job_order_activity_id, date[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/weekly_activities" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+Processing by WeeklyActivitiesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered weekly_activities/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/bootstrap-file-input.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/angular-app.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/inbound_invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/job_orders.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/tracker.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/user_activities.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/weeklyActivity.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+
+
+Started GET "/job_orders" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+Processing by JobOrdersController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mJobOrder Load (0.1ms)[0m  SELECT id, code FROM "job_orders"  WHERE "job_orders"."archived" = 'f'  ORDER BY code
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/weekly_activities/current_week?startday=" for 127.0.0.1 at 2017-09-14 11:09:36 -0400
+Processing by WeeklyActivitiesController#get_current_week as JSON
+  Parameters: {"startday"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUserActivity Load (0.1ms)[0m  SELECT job_order_id as joid, job_order_activity_id as id, date , sum(hours) as hours FROM "user_activities" inner join job_order_activities joa on job_order_activity_id = joa.id WHERE (date >= '2017-09-11 04:00:00.000000' and date <= '2017-09-18 04:00:00.000000' and user_id = 2) GROUP BY job_order_id, "user_activities"."job_order_activity_id", "user_activities"."date"  ORDER BY job_order_activity_id, date
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_activities" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+Processing by UserActivitiesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered user_activities/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/angular-app.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/bootstrap-file-input.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/inbound_invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/job_orders.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/tracker.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/user_activities.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/weeklyActivity.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+
+
+Started GET "/user_activities/stats/2017/8" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+Processing by UserActivitiesController#stats as JSON
+  Parameters: {"year"=>"2017", "month"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT SUM("user_activities"."hours") AS sum_id FROM "user_activities"  WHERE (user_id = 2 and DATE(date) = '2017-09-14')
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("user_activities"."hours") AS sum_id FROM "user_activities"  WHERE (user_id = 2 and DATE(date) = '2017-09-13')[0m
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/job_orders" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+Processing by JobOrdersController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mJobOrder Load (0.1ms)[0m  [1mSELECT id, code FROM "job_orders"  WHERE "job_orders"."archived" = 'f'  ORDER BY code[0m
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_activity_types" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+Processing by UserActivityTypesController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUserActivityType Load (0.2ms)[0m  [1mSELECT "user_activity_types".* FROM "user_activity_types"[0m
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user_activities/2/2017/9" for 127.0.0.1 at 2017-09-14 11:16:22 -0400
+Processing by UserActivitiesController#index as JSON
+  Parameters: {"user"=>"2", "year"=>"2017", "month"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUserActivity Load (0.1ms)[0m  [1mSELECT "user_activities".* FROM "user_activities"  WHERE (date >= '2017-09-01' and date <= '2017-10-01' and user_id = '2')  ORDER BY date[0m
+  [1m[35mExpense Load (0.1ms)[0m  SELECT "expenses".* FROM "expenses"  WHERE "expenses"."user_activity_id" IN (2, 3, 4, 5)
+  [1m[36mUserActivityType Load (0.1ms)[0m  [1mSELECT  "user_activity_types".* FROM "user_activity_types"  WHERE "user_activity_types"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "expenses"  WHERE "expenses"."user_activity_id" = ?  [["user_activity_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_activity_types".* FROM "user_activity_types"  WHERE "user_activity_types"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "expenses"  WHERE "expenses"."user_activity_id" = ?  [["user_activity_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_activity_types".* FROM "user_activity_types"  WHERE "user_activity_types"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "expenses"  WHERE "expenses"."user_activity_id" = ?  [["user_activity_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_activity_types".* FROM "user_activity_types"  WHERE "user_activity_types"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "expenses"  WHERE "expenses"."user_activity_id" = ?  [["user_activity_id", 5]]
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user_activities" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+Processing by UserActivitiesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered user_activities/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/angular-app.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/bootstrap-file-input.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/inbound_invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/job_orders.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/tracker.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/user_activities.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/weeklyActivity.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+
+
+Started GET "/user_activities/stats/2017/8" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+Processing by UserActivitiesController#stats as JSON
+  Parameters: {"year"=>"2017", "month"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT SUM("user_activities"."hours") AS sum_id FROM "user_activities"  WHERE (user_id = 2 and DATE(date) = '2017-09-14')
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("user_activities"."hours") AS sum_id FROM "user_activities"  WHERE (user_id = 2 and DATE(date) = '2017-09-13')[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user_activity_types" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+Processing by UserActivityTypesController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUserActivityType Load (0.1ms)[0m  [1mSELECT "user_activity_types".* FROM "user_activity_types"[0m
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/job_orders" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+Processing by JobOrdersController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mJobOrder Load (0.2ms)[0m  [1mSELECT id, code FROM "job_orders"  WHERE "job_orders"."archived" = 'f'  ORDER BY code[0m
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_activities/2/2017/9" for 127.0.0.1 at 2017-09-14 11:33:10 -0400
+Processing by UserActivitiesController#index as JSON
+  Parameters: {"user"=>"2", "year"=>"2017", "month"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUserActivity Load (0.2ms)[0m  [1mSELECT "user_activities".* FROM "user_activities"  WHERE (date >= '2017-09-01' and date <= '2017-10-01' and user_id = '2')  ORDER BY date[0m
+  [1m[35mExpense Load (0.2ms)[0m  SELECT "expenses".* FROM "expenses"  WHERE "expenses"."user_activity_id" IN (2, 3, 4, 5)
+  [1m[36mUserActivityType Load (0.1ms)[0m  [1mSELECT  "user_activity_types".* FROM "user_activity_types"  WHERE "user_activity_types"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "expenses"  WHERE "expenses"."user_activity_id" = ?  [["user_activity_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_activity_types".* FROM "user_activity_types"  WHERE "user_activity_types"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "expenses"  WHERE "expenses"."user_activity_id" = ?  [["user_activity_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_activity_types".* FROM "user_activity_types"  WHERE "user_activity_types"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "expenses"  WHERE "expenses"."user_activity_id" = ?  [["user_activity_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_activity_types".* FROM "user_activity_types"  WHERE "user_activity_types"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "expenses"  WHERE "expenses"."user_activity_id" = ?  [["user_activity_id", 5]]
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/bootstrap-file-input.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/angular-app.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/inbound_invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/job_orders.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/tracker.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/user_activities.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/weeklyActivity.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/activities_tracker/today" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+Processing by ActivitiesTrackerController#today as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mActivityTracker Load (0.1ms)[0m  [1mSELECT "activity_trackers".* FROM "activity_trackers"  WHERE "activity_trackers"."date" = '2017-09-14' AND "activity_trackers"."status" = 1 AND "activity_trackers"."user_id" = 2[0m
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/job_orders" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+Processing by JobOrdersController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mJobOrder Load (0.1ms)[0m  [1mSELECT id, code FROM "job_orders"  WHERE "job_orders"."archived" = 'f'  ORDER BY code[0m
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard/per_customer" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+Processing by DashboardController#per_customer as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mselect customers.name as customer, sum(total) as total, sum(taxable_income) as taxable_income, sum(tax) as tax 
+        from invoices join customers on invoices.customer_id = customers.id 
+        where invoices.date between '2017-01-01' and '2017-12-31'
+        group by customers.name[0m
+  Rendered dashboard/per_customer.html.haml (0.5ms)
+Completed 200 OK in 16ms (Views: 11.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard/invoices" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+Processing by DashboardController#invoices as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mInvoice Load (0.1ms)[0m  [1mSELECT "invoices".* FROM "invoices"  WHERE (date is null or date between '2017-01-01' and '2017-12-31') AND "invoices"."status" = 2[0m
+  [1m[35m (0.1ms)[0m  SELECT SUM("invoices"."taxable_income") AS sum_id FROM "invoices"  WHERE (date is null or date between '2017-01-01' and '2017-12-31') AND "invoices"."status" = 2
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("invoices"."tax") AS sum_id FROM "invoices"  WHERE (date is null or date between '2017-01-01' and '2017-12-31') AND "invoices"."status" = 2[0m
+  [1m[35m (0.1ms)[0m  SELECT SUM("invoices"."total") AS sum_id FROM "invoices"  WHERE (date is null or date between '2017-01-01' and '2017-12-31') AND "invoices"."status" = 2
+  Rendered dashboard/invoices.html.haml (2.3ms)
+Completed 200 OK in 17ms (Views: 12.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/inbound_invoices" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+Processing by DashboardController#inbound_invoices as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("inbound_invoices"."taxable_income") AS sum_id FROM "inbound_invoices"
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("inbound_invoices"."tax") AS sum_id FROM "inbound_invoices"[0m
+  [1m[35m (1.5ms)[0m  SELECT SUM("inbound_invoices"."total") AS sum_id FROM "inbound_invoices"
+  Rendered dashboard/inbound_invoices.html.haml (1.0ms)
+Completed 200 OK in 18ms (Views: 10.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/dashboard/quarters" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+Processing by DashboardController#quarters as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mInvoice Load (0.1ms)[0m  SELECT "invoices".* FROM "invoices"  WHERE (date is null or date between '2017-01-01' and '2017-12-31') AND "invoices"."status" = 2
+  Rendered dashboard/quarters.html.haml (0.9ms)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard/job_orders" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+Processing by DashboardController#job_orders as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mJobOrder Load (0.2ms)[0m  SELECT "job_orders".* FROM "job_orders"  WHERE "job_orders"."archived" = 'f'  ORDER BY code
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 3]]
+  Rendered dashboard/job_orders.html.haml (50.2ms)
+Completed 200 OK in 73ms (Views: 57.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/dashboard/activities?year=2017&month=9" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+Processing by DashboardController#activities as HTML
+  Parameters: {"year"=>"2017", "month"=>"9"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1m
+      SELECT users.name, job_orders.code, sum(user_activities.hours) as total 
+      FROM user_activities 
+      INNER JOIN users ON users.id = user_activities.user_id
+      INNER JOIN job_order_activities ON user_activities.job_order_activity_id = job_order_activities.id
+      INNER JOIN job_orders on job_order_activities.job_order_id = job_orders.id
+      WHERE user_activities.date >= '2017-09-01' and user_activities.date <= '2017-10-01'
+      GROUP BY users.name, job_orders.code
+      ORDER BY job_orders.code, users.name[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered dashboard/activities.html.haml (2.7ms)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2017-09-14 11:33:12 -0400
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-09-14 11:44:17 -0400
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:17 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:17 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:17 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:17 -0400
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:17 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:17 -0400
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:17 -0400
+
+
+Started GET "/assets/angular-app.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+
+
+Started GET "/assets/bootstrap-file-input.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+
+
+Started GET "/assets/inbound_invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+
+
+Started GET "/assets/invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+
+
+Started GET "/assets/job_orders.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+
+
+Started GET "/assets/tracker.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+
+
+Started GET "/assets/user_activities.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+
+
+Started GET "/assets/weeklyActivity.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+
+
+Started GET "/activities_tracker/today" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+Processing by ActivitiesTrackerController#today as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mActivityTracker Load (0.2ms)[0m  [1mSELECT "activity_trackers".* FROM "activity_trackers"  WHERE "activity_trackers"."date" = '2017-09-14' AND "activity_trackers"."status" = 1 AND "activity_trackers"."user_id" = 2[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/job_orders" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+Processing by JobOrdersController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mJobOrder Load (0.1ms)[0m  [1mSELECT id, code FROM "job_orders"  WHERE "job_orders"."archived" = 'f'  ORDER BY code[0m
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard/inbound_invoices" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+Processing by DashboardController#inbound_invoices as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("inbound_invoices"."taxable_income") AS sum_id FROM "inbound_invoices"[0m
+  [1m[35m (0.1ms)[0m  SELECT SUM("inbound_invoices"."tax") AS sum_id FROM "inbound_invoices"
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("inbound_invoices"."total") AS sum_id FROM "inbound_invoices"[0m
+  Rendered dashboard/inbound_invoices.html.erb (1.4ms)
+Completed 200 OK in 15ms (Views: 10.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard/quarters" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+Processing by DashboardController#quarters as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mInvoice Load (0.2ms)[0m  [1mSELECT "invoices".* FROM "invoices"  WHERE (date is null or date between '2017-01-01' and '2017-12-31') AND "invoices"."status" = 2[0m
+  Rendered dashboard/quarters.html.erb (1.3ms)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard/per_customer" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+Processing by DashboardController#per_customer as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mselect customers.name as customer, sum(total) as total, sum(taxable_income) as taxable_income, sum(tax) as tax 
+        from invoices join customers on invoices.customer_id = customers.id 
+        where invoices.date between '2017-01-01' and '2017-12-31'
+        group by customers.name[0m
+  Rendered dashboard/per_customer.html.erb (1.0ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard/job_orders" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+Processing by DashboardController#job_orders as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mJobOrder Load (0.1ms)[0m  [1mSELECT "job_orders".* FROM "job_orders"  WHERE "job_orders"."archived" = 'f'  ORDER BY code[0m
+  [1m[35m (0.1ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 3]]
+  Rendered dashboard/job_orders.html.erb (50.3ms)
+Completed 200 OK in 70ms (Views: 56.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/dashboard/invoices" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+Processing by DashboardController#invoices as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mInvoice Load (0.1ms)[0m  SELECT "invoices".* FROM "invoices"  WHERE (date is null or date between '2017-01-01' and '2017-12-31') AND "invoices"."status" = 2
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("invoices"."taxable_income") AS sum_id FROM "invoices"  WHERE (date is null or date between '2017-01-01' and '2017-12-31') AND "invoices"."status" = 2[0m
+  [1m[35m (0.1ms)[0m  SELECT SUM("invoices"."tax") AS sum_id FROM "invoices"  WHERE (date is null or date between '2017-01-01' and '2017-12-31') AND "invoices"."status" = 2
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("invoices"."total") AS sum_id FROM "invoices"  WHERE (date is null or date between '2017-01-01' and '2017-12-31') AND "invoices"."status" = 2[0m
+  Rendered dashboard/invoices.html.erb (6.2ms)
+Completed 200 OK in 20ms (Views: 14.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard/activities?year=2017&month=9" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+Processing by DashboardController#activities as HTML
+  Parameters: {"year"=>"2017", "month"=>"9"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1m
+      SELECT users.name, job_orders.code, sum(user_activities.hours) as total 
+      FROM user_activities 
+      INNER JOIN users ON users.id = user_activities.user_id
+      INNER JOIN job_order_activities ON user_activities.job_order_activity_id = job_order_activities.id
+      INNER JOIN job_orders on job_order_activities.job_order_id = job_orders.id
+      WHERE user_activities.date >= '2017-09-01' and user_activities.date <= '2017-10-01'
+      GROUP BY users.name, job_orders.code
+      ORDER BY job_orders.code, users.name[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered dashboard/activities.html.erb (2.5ms)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2017-09-14 11:44:18 -0400
+
+
+Started GET "/invoices" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+Processing by InvoicesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("invoices"."taxable_income") AS sum_id FROM "invoices"  WHERE "invoices"."status" = 2 AND (date is null or date between '2017-01-01' and '2017-12-31')
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("invoices"."tax") AS sum_id FROM "invoices"  WHERE "invoices"."status" = 2 AND (date is null or date between '2017-01-01' and '2017-12-31')[0m
+  [1m[35m (0.1ms)[0m  SELECT SUM("invoices"."total") AS sum_id FROM "invoices"  WHERE "invoices"."status" = 2 AND (date is null or date between '2017-01-01' and '2017-12-31')
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT "customers".* FROM "customers"   ORDER BY "customers"."name" ASC[0m
+  [1m[35mInvoice Load (0.1ms)[0m  SELECT "invoices".* FROM "invoices"  WHERE (date is null or date between '2017-01-01' and '2017-12-31')  ORDER BY "invoices"."number" ASC
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ?  ORDER BY "customers"."name" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered invoices/index.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 29ms (Views: 21.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/angular-app.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/bootstrap-file-input.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/inbound_invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/job_orders.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/tracker.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/user_activities.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/weeklyActivity.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:25 -0400
+
+
+Started GET "/inbound_invoices" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+Processing by InboundInvoicesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("inbound_invoices"."taxable_income") AS sum_id FROM "inbound_invoices"  WHERE (date >= '2017-09-01' and date <= '2017-10-01')[0m
+  [1m[35m (0.1ms)[0m  SELECT SUM("inbound_invoices"."tax") AS sum_id FROM "inbound_invoices"  WHERE (date >= '2017-09-01' and date <= '2017-10-01')
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("inbound_invoices"."total") AS sum_id FROM "inbound_invoices"  WHERE (date >= '2017-09-01' and date <= '2017-10-01')[0m
+  [1m[35mInboundInvoice Load (0.2ms)[0m  SELECT "inbound_invoices".* FROM "inbound_invoices"  WHERE (date >= '2017-09-01' and date <= '2017-10-01')  ORDER BY due_date DESC
+  [1m[36mJobOrder Load (0.1ms)[0m  [1mSELECT  "job_orders".* FROM "job_orders"  WHERE "job_orders"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered inbound_invoices/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 28ms (Views: 23.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/angular-app.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/bootstrap-file-input.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/inbound_invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/job_orders.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/tracker.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/user_activities.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/weeklyActivity.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:26 -0400
+
+
+Started GET "/job_orders" for 127.0.0.1 at 2017-09-14 11:44:27 -0400
+Processing by JobOrdersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mJobOrder Load (0.2ms)[0m  [1mSELECT "job_orders".* FROM "job_orders"  WHERE "job_orders"."archived" = 'f'  ORDER BY code[0m
+  [1m[35m (0.1ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ?  ORDER BY "customers"."name" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mselect sum(ua.hours * u.hourly_cost) as cost
+              from user_activities ua 
+              inner join users u on ua.user_id = u.id 
+              inner join job_order_activities joa on joa.id = ua.job_order_activity_id
+              where joa.job_order_id = 1[0m
+  [1m[35m (0.1ms)[0m  select sum(ua.hours * u.hourly_cost) as cost
+              from user_activities ua 
+              inner join users u on ua.user_id = u.id 
+              inner join job_order_activities joa on joa.id = ua.job_order_activity_id
+              where joa.job_order_id = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 4]]
+  [1m[35m (0.1ms)[0m  select sum(ua.hours * u.hourly_cost) as cost
+              from user_activities ua 
+              inner join users u on ua.user_id = u.id 
+              inner join job_order_activities joa on joa.id = ua.job_order_activity_id
+              where joa.job_order_id = 4
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 5]]
+  [1m[35m (0.1ms)[0m  select sum(ua.hours * u.hourly_cost) as cost
+              from user_activities ua 
+              inner join users u on ua.user_id = u.id 
+              inner join job_order_activities joa on joa.id = ua.job_order_activity_id
+              where joa.job_order_id = 5
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 6]]
+  [1m[35m (0.1ms)[0m  select sum(ua.hours * u.hourly_cost) as cost
+              from user_activities ua 
+              inner join users u on ua.user_id = u.id 
+              inner join job_order_activities joa on joa.id = ua.job_order_activity_id
+              where joa.job_order_id = 6
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 2]]
+  [1m[35m (0.1ms)[0m  select sum(ua.hours * u.hourly_cost) as cost
+              from user_activities ua 
+              inner join users u on ua.user_id = u.id 
+              inner join job_order_activities joa on joa.id = ua.job_order_activity_id
+              where joa.job_order_id = 2
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 7]]
+  [1m[35m (0.2ms)[0m  select sum(ua.hours * u.hourly_cost) as cost
+              from user_activities ua 
+              inner join users u on ua.user_id = u.id 
+              inner join job_order_activities joa on joa.id = ua.job_order_activity_id
+              where joa.job_order_id = 7
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 3]]
+  [1m[35m (0.1ms)[0m  select sum(ua.hours * u.hourly_cost) as cost
+              from user_activities ua 
+              inner join users u on ua.user_id = u.id 
+              inner join job_order_activities joa on joa.id = ua.job_order_activity_id
+              where joa.job_order_id = 3
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "job_orders"  WHERE "job_orders"."archived" = 'f'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 3]]
+  Rendered job_orders/index.html.haml within layouts/application (63.4ms)
+Completed 200 OK in 82ms (Views: 77.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:27 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:27 -0400
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:27 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:27 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:27 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:27 -0400
+
+
+Started GET "/assets/angular-app.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:27 -0400
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:27 -0400
+
+
+Started GET "/assets/bootstrap-file-input.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:27 -0400
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:27 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:27 -0400
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:27 -0400
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:27 -0400
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:27 -0400
+
+
+Started GET "/assets/inbound_invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/job_orders.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/tracker.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/user_activities.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/weeklyActivity.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/user_activities" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+Processing by UserActivitiesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered user_activities/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 22ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/bootstrap-file-input.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/angular-app.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/inbound_invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/job_orders.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/tracker.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/user_activities.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/weeklyActivity.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+
+
+Started GET "/user_activities/stats/2017/8" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+Processing by UserActivitiesController#stats as JSON
+  Parameters: {"year"=>"2017", "month"=>"8"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("user_activities"."hours") AS sum_id FROM "user_activities"  WHERE (user_id = 2 and DATE(date) = '2017-09-14')[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("user_activities"."hours") AS sum_id FROM "user_activities"  WHERE (user_id = 2 and DATE(date) = '2017-09-13')
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/job_orders" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+Processing by JobOrdersController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mJobOrder Load (0.1ms)[0m  SELECT id, code FROM "job_orders"  WHERE "job_orders"."archived" = 'f'  ORDER BY code
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_activity_types" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+Processing by UserActivityTypesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUserActivityType Load (0.2ms)[0m  SELECT "user_activity_types".* FROM "user_activity_types"
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user_activities/2/2017/9" for 127.0.0.1 at 2017-09-14 11:44:28 -0400
+Processing by UserActivitiesController#index as JSON
+  Parameters: {"user"=>"2", "year"=>"2017", "month"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUserActivity Load (0.2ms)[0m  SELECT "user_activities".* FROM "user_activities"  WHERE (date >= '2017-09-01' and date <= '2017-10-01' and user_id = '2')  ORDER BY date
+  [1m[36mExpense Load (0.1ms)[0m  [1mSELECT "expenses".* FROM "expenses"  WHERE "expenses"."user_activity_id" IN (2, 3, 4, 5)[0m
+  [1m[35mUserActivityType Load (0.1ms)[0m  SELECT  "user_activity_types".* FROM "user_activity_types"  WHERE "user_activity_types"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "expenses"  WHERE "expenses"."user_activity_id" = ?[0m  [["user_activity_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_activity_types".* FROM "user_activity_types"  WHERE "user_activity_types"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "expenses"  WHERE "expenses"."user_activity_id" = ?[0m  [["user_activity_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_activity_types".* FROM "user_activity_types"  WHERE "user_activity_types"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "expenses"  WHERE "expenses"."user_activity_id" = ?[0m  [["user_activity_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_activity_types".* FROM "user_activity_types"  WHERE "user_activity_types"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "expenses"  WHERE "expenses"."user_activity_id" = ?[0m  [["user_activity_id", 5]]
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+Processing by ExpensesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mExpense Load (0.2ms)[0m  SELECT "expenses".* FROM "expenses"  WHERE (date >= '2017-09-01' and date <= '2017-10-01' and user_id = 2)  ORDER BY date
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("expenses"."amount") AS sum_id FROM "expenses"  WHERE (date >= '2017-09-01' and date <= '2017-10-01' and user_id = 2)[0m
+  Rendered expenses/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/angular-app.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/bootstrap-file-input.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/inbound_invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/job_orders.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/tracker.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/user_activities.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/weeklyActivity.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:29 -0400
+
+
+Started GET "/activities_tracker" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+Processing by ActivitiesTrackerController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered activities_tracker/index.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/bootstrap-file-input.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/angular-app.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/inbound_invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/job_orders.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/tracker.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/user_activities.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/weeklyActivity.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+
+
+Started GET "/activities_tracker/today" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+Processing by ActivitiesTrackerController#today as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mActivityTracker Load (0.2ms)[0m  SELECT "activity_trackers".* FROM "activity_trackers"  WHERE "activity_trackers"."date" = '2017-09-14' AND "activity_trackers"."status" = 1 AND "activity_trackers"."user_id" = 2
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/job_orders" for 127.0.0.1 at 2017-09-14 11:44:30 -0400
+Processing by JobOrdersController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mJobOrder Load (0.2ms)[0m  SELECT id, code FROM "job_orders"  WHERE "job_orders"."archived" = 'f'  ORDER BY code
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-09-14 11:44:31 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mSetting Load (0.2ms)[0m  SELECT "settings".* FROM "settings"
+  Rendered settings/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:31 -0400
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:31 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/bootstrap-file-input.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/angular-app.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/inbound_invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/job_orders.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/tracker.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/user_activities.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/weeklyActivity.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:32 -0400
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/bootstrap-file-input.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/angular-app.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/inbound_invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/invoice.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/job_orders.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/tracker.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/user_activities.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/weeklyActivity.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+
+
+Started GET "/activities_tracker/today" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+Processing by ActivitiesTrackerController#today as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mActivityTracker Load (0.2ms)[0m  [1mSELECT "activity_trackers".* FROM "activity_trackers"  WHERE "activity_trackers"."date" = '2017-09-14' AND "activity_trackers"."status" = 1 AND "activity_trackers"."user_id" = 2[0m
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard/quarters" for 127.0.0.1 at 2017-09-14 11:44:35 -0400
+Processing by DashboardController#quarters as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mInvoice Load (0.1ms)[0m  [1mSELECT "invoices".* FROM "invoices"  WHERE (date is null or date between '2017-01-01' and '2017-12-31') AND "invoices"."status" = 2[0m
+  Rendered dashboard/quarters.html.erb (0.8ms)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard/inbound_invoices" for 127.0.0.1 at 2017-09-14 11:44:36 -0400
+Processing by DashboardController#inbound_invoices as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("inbound_invoices"."taxable_income") AS sum_id FROM "inbound_invoices"[0m
+  [1m[35m (0.1ms)[0m  SELECT SUM("inbound_invoices"."tax") AS sum_id FROM "inbound_invoices"
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("inbound_invoices"."total") AS sum_id FROM "inbound_invoices"[0m
+  Rendered dashboard/inbound_invoices.html.erb (1.2ms)
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/per_customer" for 127.0.0.1 at 2017-09-14 11:44:36 -0400
+Processing by DashboardController#per_customer as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mselect customers.name as customer, sum(total) as total, sum(taxable_income) as taxable_income, sum(tax) as tax 
+        from invoices join customers on invoices.customer_id = customers.id 
+        where invoices.date between '2017-01-01' and '2017-12-31'
+        group by customers.name[0m
+  Rendered dashboard/per_customer.html.erb (0.4ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/invoices" for 127.0.0.1 at 2017-09-14 11:44:36 -0400
+Processing by DashboardController#invoices as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mInvoice Load (0.2ms)[0m  [1mSELECT "invoices".* FROM "invoices"  WHERE (date is null or date between '2017-01-01' and '2017-12-31') AND "invoices"."status" = 2[0m
+  [1m[35m (0.1ms)[0m  SELECT SUM("invoices"."taxable_income") AS sum_id FROM "invoices"  WHERE (date is null or date between '2017-01-01' and '2017-12-31') AND "invoices"."status" = 2
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("invoices"."tax") AS sum_id FROM "invoices"  WHERE (date is null or date between '2017-01-01' and '2017-12-31') AND "invoices"."status" = 2[0m
+  [1m[35m (0.1ms)[0m  SELECT SUM("invoices"."total") AS sum_id FROM "invoices"  WHERE (date is null or date between '2017-01-01' and '2017-12-31') AND "invoices"."status" = 2
+  Rendered dashboard/invoices.html.erb (1.2ms)
+Completed 200 OK in 16ms (Views: 9.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/job_orders" for 127.0.0.1 at 2017-09-14 11:44:36 -0400
+Processing by JobOrdersController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mJobOrder Load (0.1ms)[0m  SELECT id, code FROM "job_orders"  WHERE "job_orders"."archived" = 'f'  ORDER BY code
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard/job_orders" for 127.0.0.1 at 2017-09-14 11:44:36 -0400
+Processing by DashboardController#job_orders as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mJobOrder Load (0.1ms)[0m  SELECT "job_orders".* FROM "job_orders"  WHERE "job_orders"."archived" = 'f'  ORDER BY code
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 6]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 5]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT SUM(hours) AS sum_id FROM "job_order_activities" INNER JOIN "user_activities" ON "user_activities"."job_order_activity_id" = "job_order_activities"."id" WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?  [["job_order_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("job_order_activities"."estimated_hours") AS sum_id FROM "job_order_activities"  WHERE "job_order_activities"."job_order_id" = ?[0m  [["job_order_id", 3]]
+  Rendered dashboard/job_orders.html.erb (47.7ms)
+Completed 200 OK in 73ms (Views: 55.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/dashboard/activities?year=2017&month=9" for 127.0.0.1 at 2017-09-14 11:44:36 -0400
+Processing by DashboardController#activities as HTML
+  Parameters: {"year"=>"2017", "month"=>"9"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1m
+      SELECT users.name, job_orders.code, sum(user_activities.hours) as total 
+      FROM user_activities 
+      INNER JOIN users ON users.id = user_activities.user_id
+      INNER JOIN job_order_activities ON user_activities.job_order_activity_id = job_order_activities.id
+      INNER JOIN job_orders on job_order_activities.job_order_id = job_orders.id
+      WHERE user_activities.date >= '2017-09-01' and user_activities.date <= '2017-10-01'
+      GROUP BY users.name, job_orders.code
+      ORDER BY job_orders.code, users.name[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered dashboard/activities.html.erb (3.5ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2017-09-14 11:44:36 -0400
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "customers"
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers"   ORDER BY customers.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "expense_types"
+  [1m[36mExpenseType Load (0.1ms)[0m  [1mSELECT  "expense_types".* FROM "expense_types"   ORDER BY expense_types.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "inbound_invoices"
+  [1m[36mInboundInvoice Load (0.1ms)[0m  [1mSELECT  "inbound_invoices".* FROM "inbound_invoices"   ORDER BY inbound_invoices.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "invoices"
+  [1m[36mInvoice Load (0.1ms)[0m  [1mSELECT  "invoices".* FROM "invoices"   ORDER BY invoices.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "job_orders"
+  [1m[36mJobOrder Load (0.1ms)[0m  [1mSELECT  "job_orders".* FROM "job_orders"   ORDER BY job_orders.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "settings"
+  [1m[36mSetting Load (0.1ms)[0m  [1mSELECT  "settings".* FROM "settings"   ORDER BY settings.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY users.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "user_activities"
+  [1m[36mUserActivity Load (0.1ms)[0m  [1mSELECT  "user_activities".* FROM "user_activities"   ORDER BY user_activities.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "user_activity_types"
+  Rendered /Users/bryananderson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-0.6.5/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (24.8ms)
+  Rendered /Users/bryananderson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-0.6.5/app/views/layouts/rails_admin/_secondary_navigation.html.haml (2.2ms)
+  Rendered /Users/bryananderson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-0.6.5/app/views/layouts/rails_admin/_navigation.html.haml (6.0ms)
+  Rendered /Users/bryananderson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-0.6.5/app/views/layouts/rails_admin/pjax.html.haml (1.6ms)
+Completed 200 OK in 80ms (Views: 62.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/jquery-ui/widget.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/jquery-ui/mouse.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/jquery-ui/position.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/jquery-ui/sortable.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/jquery-ui/menu.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/ra.filter-box.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/ra.remote-form.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/jquery.pjax.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/ra.i18n.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/ra.widgets.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/ui.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/custom/ui.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/rails_admin/rails_admin.js?body=1" for 127.0.0.1 at 2017-09-14 11:46:00 -0400
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2017-09-14 11:46:00 -0400

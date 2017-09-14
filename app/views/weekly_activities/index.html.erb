@@ -1,0 +1,116 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h2>
+      <%= t('views.weekly_activity.weekly_activity') %>
+    </h2>
+  </div>
+</div>
+<div class="row" ng-controller="WeeklyActivity">
+  <div class="col-lg-9">
+    <form class="form-inline">
+      <div class="row">
+        <div class="col-md-4">
+          <a class="btn btn-default" href="/weekly_activities?startday=<%= @startday - 7.days %>">
+            <i class="icon-angle-left"></i>
+            <%= t('views.weekly.prev') %>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <label>
+            <%= t('views.weekly.week')  %>
+            <%= @startday.strftime("%d/%m/%Y") %>
+          </label>
+        </div>
+        <div class="col-md-4">
+          <a class="btn btn-default pull-right" href="/weekly_activities?startday=<%= @startday + 7.days %>">
+            <%= t('views.weekly.next') %>
+            <i class="icon-angle-right"></i>
+          </a>
+        </div>
+      </div>
+    </form>
+    <hr/>
+    <div class="row">
+      <div class="col-lg-10">
+        <table class="table">
+          <thead>
+            <tr>
+              <td>
+                <%= t('views.activities.job_order') %>
+              </td>
+              <td>
+                <%= t('views.activities.activity') %>
+              </td>
+              <% @week.each do |d| %>
+                <td>
+                  <%= d.strftime("%a %e") %>
+                </td>
+              <% end %>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-include="'weekRow.html'" ng-repeat="row in rows"></tr>
+          </tbody>
+          <tfooter>
+            <tr>
+              <td>
+                <a href="#" ng-click="addRow()">
+                  <%= t('views.activities.new_activity') %>
+                </a>
+              </td>
+              <td></td>
+              <% 7.times do |d| %>
+                <td>
+                  <%= raw("<span ng-bind=\"totals[#{d}]\" />") %>
+                </td>
+              <% end %>
+            </tr>
+          </tfooter>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="row sidebar-row">
+      <button class="btn btn-info btn-block btn-lg" ng-click="save()">
+        <%= t('views.activities.save')   %>
+      </button>
+    </div>
+    <div class="row sidebar-row">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title text-center">
+            Weekly hours
+          </h3>
+        </div>
+        <div class="panel-body">
+          <ul class="info-panel">
+            <li class="header">
+              {{week_total}}
+            </li>
+            <li class="header"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script id="weekRow.html" type="text/ng-template">
+  <td>
+    <%= select_tag :job_order, '', 'ng-model' => 'row.job_order_id', 'ng-options' => 'j.id as j.code for j in jobOrders', :class => 'form-control', 'ng-change' => 'loadActivities($index, row.job_order_id)' %>
+  </td>
+  <td>
+    <%= select_tag :activity, '', 'ng-model' => 'row.activity_id', 'ng-options' => 'j.id as j.description for j in row.activities', :class => 'form-control' %>
+  </td>
+  <% 7.times do |d| %>
+    <td class="weekly-td">
+      <%= text_field_tag "day_#{d}", '', :class => 'form-control weekly-hour', 'ng-model' => "row.hours[#{d}]" , 'ng-change' => 'updateTotals()' %>
+    </td>
+  <% end %>
+  <td>
+    <a ng-click="deleteRow(row)">
+      delete
+    </a>
+  </td>
+</script>

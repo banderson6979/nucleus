@@ -1,0 +1,122 @@
+<div class="col-lg-9">
+  <%= form_for @job_order, {:html => {:role => "form"}} do |f| %>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <%= f.label :code %>
+          <%= f.text_field :code, :class => 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :hourly_rate %>
+          <%= f.text_field :hourly_rate, :class => 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :notes %>
+          <%= f.text_area :notes, :class => 'form-control' %>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <%= f.label :customer %>
+          <%= select_tag "job_order[customer_id]", options_from_collection_for_select(@customers, "id", "name", @job_order.customer.id), :class => 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :price %>
+          <%= f.text_field :price, :class => 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :archived %>
+          <%= f.check_box :archived, :class => 'form-control' %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <hr/>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3>
+          <%= t('views.job_orders.activities') %>
+          <a class="btn btn-info pull-right" id="new-activity">
+            <i class="icon-plus icon-white"></i>
+            <%= t('views.job_orders.new_activity') %>
+          </a>
+        </h3>
+        <table class="items activities table">
+          <thead>
+            <tr>
+              <td>
+                <%= t('views.job_orders.description') %>
+              </td>
+              <td>
+                <%= t('views.job_orders.hours') %>
+              </td>
+              <td>
+                <%= t('views.job_orders.activity') %>
+              </td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody>
+            <%= f.fields_for :activities do |a| %>
+              <tr>
+                <td>
+                  <%= a.text_field :description, {:class => 'form-control'} %>
+                </td>
+                <td>
+                  <%= a.text_field :estimated_hours, {:class => 'amount form-control'} %>
+                </td>
+                <td>
+                  <%= a.check_box :active, {:class => 'form-control'} %>
+                </td>
+                <td>
+                  <a class="btn" href="#" id="remove-activity">
+                    <i class="icon-trash icon-large"></i>
+                  </a>
+                  <%= a.hidden_field :_destroy %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div class="col-lg-3">
+  <div class="row sidebar-row">
+    <a class="btn btn-info btn-block btn-lg" id="save-form">
+      <%= t('views.job_orders.save') %>
+    </a>
+    <% if !@job_order.new_record? %>
+      <a class="btn btn-default btn-block btn-lg" href="<%= job_order_activities_path(@job_order) %>">
+        <%= t('views.job_orders.activities') %>
+      </a>
+    <% end %>
+  </div>
+  <div class="row sidebar-row">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title text-center">
+          <%= t('views.job_orders.summary') %>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <ul class="info-panel">
+          <li class="header">
+            <%= t('views.job_orders.total_hours') %>
+          </li>
+          <li class="amount">
+            <%= @job_order.total_estimated_hours %>
+          </li>
+          <li class="header">
+            <%= t('views.job_orders.done_hours') %>
+          </li>
+          <li class="amount">
+            <%= @job_order.total_executed_hours %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

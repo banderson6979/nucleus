@@ -1,0 +1,236 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1>
+      <%= "#{t('views.activities.title')} #{current_user.name}" %>
+    </h1>
+  </div>
+</div>
+<div class="row" ng-controller="UserActivitiesCtrl">
+  <div class="col-lg-9">
+    <div id="activityPage">
+      <form action="/user_activities/index" class="well form-inline" method="POST">
+        <div class="form-group">
+          <label>
+            <%= t('views.activities.month') %>
+          </label>
+          <%= select_month @filter_date, {add_month_numbers: false, :use_short_month => true}, {name: 'month', :class => 'form-control', 'ng-model' => 'month'} %>
+        </div>
+        <div class="form-group">
+          <label>
+            <%= t('views.activities.year') %>
+          </label>
+          <%= select_year @filter_date, {add_month_numbers: false}, {name: 'year', :class => 'form-control', 'ng-model' => 'year'} %>
+        </div>
+        <div class="form-group">
+          <label>
+            <%= t('views.activities.user') %>
+          </label>
+          <%= select_tag 'user', options_from_collection_for_select(@users, "id", "email"), 'ng-model' => 'user', 'ng-init' => "user='#{@current_user.id}'", :class => 'form-control' %>
+        </div>
+        <button class="btn btn-info pull-right" ng-click="filter()" type="button">
+          <%= t('views.activities.apply') %>
+        </button>
+      </form>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th></th>
+            <th>
+              <%= t('views.activities.date') %>
+            </th>
+            <th>
+              <%= t('views.activities.hours') %>
+            </th>
+            <th>
+              <%= t('views.activities.job_order') %>
+            </th>
+            <th>
+              <%= t('views.activities.activity') %>
+            </th>
+            <th>
+              <%= t('views.activities.notes') %>
+            </th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="a in activities" ng-style="getRowStyle(a)" row-color="{{$index}}">
+            <td class="expenses-column">
+              <i class="icon-money" ng-show="a.expenses"></i>
+            </td>
+            <td>
+              <span>
+                {{a.date | date:'dd-MM-yyyy'}}
+              </span>
+              <br/>
+              <small class="grey" ng-bind="getDay(a.date)"></small>
+            </td>
+            <td>{{a.hours}}</td>
+            <td>{{a.jobOrder}}</td>
+            <td>{{a.activity}}</td>
+            <td>{{a.description}}</td>
+            <td>
+              <div class="btn-group">
+                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  <%= t('views.activities.actions') %>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li>
+                    <a data-toggle="modal" href="#editActivity" ng-click="edit(a.id)">
+                      <i class="icon-edit icon-large"></i>
+                      <%= t('views.activities.edit') %>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" ng-click="delete(a.id)">
+                      <i class="icon-trash icon-large text-error"></i>
+                      <%= t('views.activities.delete') %>
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="/expenses/new?user_activity_id={{a.id %> %>">
+                      <i class="icon-money icon-large"></i>
+                      <%= t('views.activities.add_expense') %>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/expenses?user_activity_id={{a.id %> %>">
+                      <i class="icon-euro icon-large"></i>
+                      <%= t('views.activities.expense_list') %>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-lg-3 sidebar-nav" ng-controller="RightPanelCtrl">
+    <div class="row sidebar-row">
+      <a class="btn btn-info btn-block" data-toggle="modal" href="#editActivity" id="openModal" ng-click="newActivity()">
+        <%= t('views.activities.new_activity') %>
+      </a>
+      <a class="btn btn-info btn-block" href="/weekly_activities" id="openModal">
+        <%= t('views.activities.weekly_activities') %>
+      </a>
+      <a class="btn btn-default btn-block" href="/user_activities/report.xls?month={{month}}&year={{year}}&user={{user}}" id="report">
+        <%= t('views.activities.report') %>
+      </a>
+      <a class="btn btn-default btn-block" href="/user_activities/report_2.xls?month={{month}}&year={{year}}&user={{user}}" id="report2">
+        <%= t('views.activities.report_2') %>
+      </a>
+      <% # %a.btn.btn-default.btn-block#report_tutti{"href" => '/user_activities/report_presenze.xls?month={{month}}&year={{year}}&user={{user}}'} %>
+      <% #   Report presenze tutti %>
+      <iframe id="frm" style="display:none"></iframe>
+    </div>
+    <div class="row sidebar-row">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title text-center">
+            <%= t('views.activities.summary') %>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <ul class="info-panel" id="stats">
+            <li class="header">
+              <%= t('views.activities.today') %>
+            </li>
+            <li class="amount">{{todayHours}} h</li>
+            <li class="header">
+              <%= t('views.activities.yesterday') %>
+            </li>
+            <li class="amount">{{yestardayHours}} h</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="editActivity" ng-controller="UserActivityCtrl">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal" type="button">&times;</button>
+        <h3>
+          <%= t('views.activities.new_activity') %>
+        </h3>
+      </div>
+      <div class="modal-body">
+        <form data-bind="submit: save" role="form">
+          <%= hidden_field_tag 'id', '', :data => {:bind => "value: id"} %>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label>
+                  Activity type
+                </label>
+                <%= select_tag :job_order, '', 'ng-model' => 'activity.user_activity_type_id', 'ng-options' => 'a.id as a.description for a in activityTypes', :class => 'form-control' %>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label>
+                  <%= t('views.activities.job_order') %>
+                </label>
+                <%= select_tag :job_order, '', 'ng-model' => 'activity.job_order_id', 'ng-options' => 'j.id as j.code for j in jobOrders', :class => 'form-control', 'ng-disabled' => '!jobOrderEnabled()' %>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label>
+                  <%= t('views.activities.activity') %>
+                </label>
+                <%= select_tag :activity, '', 'ng-model' => 'activity.job_order_activity_id', 'ng-options' => 'j.id as j.description for j in jobOrderActivities', :class => 'form-control', 'ng-disabled' => '!jobOrderEnabled()' %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label>
+                  <%= t('views.activities.hours') %>
+                </label>
+                <%= text_field_tag 'hours', '', :class => 'input-small', 'ng-model' => "activity.hours", :class => 'form-control' %>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label>
+                  <%= t('views.activities.date') %>
+                </label>
+                <%= text_field_tag 'date', '', :class => 'input-small', 'ng-model' => "activity.date", "b-datepicker" => "", :class => 'form-control' %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="form-group">
+                <label>
+                  <%= t('views.activities.notes') %>
+                </label>
+                <%= text_area_tag :description, '', 'ng-model' => "activity.description", :class => 'form-control' %>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-default" data-dismiss="modal">
+          <%= t('views.activities.cancel') %>
+        </a>
+        <button class="btn btn-info" data-dismiss="modal" ng-click="save()" type="submit">
+          <%= t('views.activities.save') %>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

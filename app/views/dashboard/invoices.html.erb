@@ -1,0 +1,76 @@
+<div class="panel panel-default">
+  <div class="panel-heading dashboard-panel">
+    <h3 class="panel-title">
+      <%= t('view.dashboard.invoiced') + " #{AppSettings.fiscal_year}" %>
+      <div class="pull-right">
+        <ul class="nav nav-tabs dashboard-tabs">
+          <li class="active">
+            <a data-toggle="tab" href="#home">
+              <i class="icon-table"></i>
+            </a>
+          </li>
+          <li>
+            <a data-toggle="tab" href="#profile">
+              <i class="icon-bar-chart"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </h3>
+  </div>
+  <div class="panel-body">
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade in active" id="home">
+        <table class="table">
+          <tr class="info">
+            <td>
+              <span class="text-success">
+                <%= t('views.dashboard.invoiced.invoiced') %>
+              </span>
+            </td>
+            <td>
+              <span class="pull-right text-success">
+                <%= number_to_currency @invoices_totals.taxable_income %>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <%= t('views.dashboard.invoiced.vat') %>
+            </td>
+            <td>
+              <span class="pull-right">
+                <%= number_to_currency @invoices_totals.tax %>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="italic">
+              <%= t('views.dashboard.invoiced.total') %>
+            </td>
+            <td>
+              <span class="pull-right">
+                <%= number_to_currency @invoices_totals.total %>
+              </span>
+            </td>
+          </tr>
+          <tr class="error">
+            <td>
+              <span class="text-info">
+                <%= t('views.dashboard.invoiced.to_get') %>
+              </span>
+            </td>
+            <td>
+              <span class="pull-right text-info">
+                <%= number_to_currency @to_receive %>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="tab-pane fade" id="profile">
+        <img src="//charts.brace.io/bar.svg?&invoiced=<%= @invoices_totals.taxable_income %>&to_get=<%= @to_receive %>&_height=200px&_width=500px&"/>
+      </div>
+    </div>
+  </div>
+</div>

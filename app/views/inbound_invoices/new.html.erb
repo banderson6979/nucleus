@@ -1,0 +1,30 @@
+<fieldset>
+  <legend>
+    <%= "New invoice input" %>
+  </legend>
+  <%= render 'form' %>
+</fieldset>
+<%= content_for :side_bar do %>
+  <div class="well sidebar-nav">
+    <ul class="totals info-panel">
+      <li>Imponibile</li>
+      <li class="amount" id="taxable-income">
+        <%= number_to_currency(@totals.taxable_income) %>
+      </li>
+      <li>Iva</li>
+      <li class="amount" id="tax">
+        <%= number_to_currency(@totals.tax) %>
+      </li>
+      <li>Totale  </li>
+      <li class="amount" id="total">
+        <%= number_to_currency(@totals.total) %>
+      </li>
+    </ul>
+    <hr/>
+    <ul class="info-panel">
+      <li>
+        <a class="btn btn-primary" id="save-form">salva</a>
+      </li>
+    </ul>
+  </div>
+<% end %>

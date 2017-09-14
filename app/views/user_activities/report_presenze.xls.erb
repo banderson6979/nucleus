@@ -1,0 +1,42 @@
+<table style="border:#999 1px solid ">
+  <tr>
+    <td colspan="10">
+      <%= "Presenze di #{@month}" %>
+    </td>
+  </tr>
+  <tr>
+    <td style="border:#999 1px solid ">
+      <%= @user_name %>
+    </td>
+    <td style="border:#999 1px solid ">
+      data
+    </td>
+    <% @formatted_activities.each do |a| %>
+      <td style="border:#999 1px solid ">
+        <%= a.date %>
+      </td>
+    <% end %>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="border:#999 1px solid ">
+      Hours worked
+    </td>
+    <% @formatted_activities.each do |a| %>
+      <td style="border:#999 1px solid ">
+        <%= a.working_hours %>
+      </td>
+    <% end %>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="border:#999 1px solid ">
+      Vacation hours
+    </td>
+    <% @formatted_activities.each do |a| %>
+      <td style="border:#999 1px solid ">
+        <%= a.holiday_hours %>
+      </td>
+    <% end %>
+  </tr>
+</table>

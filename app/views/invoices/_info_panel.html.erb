@@ -1,0 +1,41 @@
+<div class="row sidebar-row">
+  <a class="btn btn-info btn-block btn-lg" id="save-form">
+    Save
+  </a>
+</div>
+<div class="row sidebar-row">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title text-center">Summary</h3>
+    </div>
+    <div class="panel-body">
+      <ul class="info-panel">
+        <li class="header">Taxable</li>
+        <li class="amount" id="taxable-income">
+          <%= number_to_currency(@totals.taxable_income) %>
+        </li>
+        <li class="header">Value Added Tax</li>
+        <li class="amount" id="tax">
+          <%= number_to_currency(@totals.tax) %>
+        </li>
+        <li class="header">Total</li>
+        <li class="amount" id="total">
+          <%= number_to_currency(@totals.total) %>
+        </li>
+      </ul>
+    </div>
+    <div class="panel-heading">
+      <h3 class="panel-title text-center">Status</h3>
+    </div>
+    <div class="panel-body">
+      <ul class="info-panel">
+        <li class="center">
+          <%= status_helper(@invoice.status) %>
+        </li>
+        <li class="center">
+          <%= due_date_helper(@invoice) %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

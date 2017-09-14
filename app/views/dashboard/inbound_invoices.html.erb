@@ -1,0 +1,65 @@
+<div class="panel panel-default">
+  <div class="panel-heading dashboard-panel">
+    <h3 class="panel-title">
+      <%= t('views.dashboard.inbound_invoices.expenses') %>
+      <div class="pull-right">
+        <ul class="nav nav-tabs dashboard-tabs">
+          <li class="active">
+            <a data-toggle="tab" href="#exp-num">
+              <i class="icon-table"></i>
+            </a>
+          </li>
+          <li>
+            <a data-toggle="tab" href="#exp-chart">
+              <i class="icon-bar-chart"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </h3>
+  </div>
+  <div class="panel-body">
+    <div class="tab-content">
+      <div class="tab-pane fade in active" id="exp-num">
+        <table class="table">
+          <tr>
+            <th>
+              <%= t('views.dashboard.inbound_invoices.expenses') %>
+            </th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>
+              <%= t('views.dashboard.inbound_invoices.net') %>
+            </td>
+            <td>
+              <span class="pull-right">
+                <%= number_to_currency @inbound_invoices_totals.taxable_income %>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <%= t('views.dashboard.inbound_invoices.vat') %>
+            </td>
+            <td>
+              <span class="pull-right">
+                <%= number_to_currency @inbound_invoices_totals.tax %>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <%= t('views.dashboard.inbound_invoices.total') %>
+            </td>
+            <td>
+              <span class="pull-right">
+                <%= number_to_currency @inbound_invoices_totals.total %>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
