@@ -56,6 +56,10 @@
               <li>
                 <%= link_to t('views.top_bar.logout'), destroy_user_session_path, :method => :delete %>
               </li>
+            <% else %>
+              <li>
+                <%= link_to t('views.top_bar.logout'), destroy_user_session_path, :method => :delete %>
+              </li>
             <% end %>
           </ul>
           <ul class="nav navbar-nav pull-right">
